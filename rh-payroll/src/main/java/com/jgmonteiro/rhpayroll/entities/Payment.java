@@ -2,16 +2,16 @@ package com.jgmonteiro.rhpayroll.entities;
 
 import java.io.Serializable;
 
-public class Payment implements Serializable{
-	
+public class Payment implements Serializable {
+
 	private static final long serialVersionUID = 1L;
-	
+
 	private String name;
 	private Double dailyIncome;
 	private Integer days;
-	
+
 	public Payment() {
-		
+
 	}
 
 	public Payment(String name, Double dailyIncome, Integer days) {
@@ -44,10 +44,8 @@ public class Payment implements Serializable{
 	public void setDays(Integer days) {
 		this.days = days;
 	}
-	
-	public Double getTotal(Double dailyIncome, Integer days) {
-		Double total = dailyIncome * days;
-		return total;
+
+	public double getTotal() {
+		return days * dailyIncome;
 	}
 }
-
